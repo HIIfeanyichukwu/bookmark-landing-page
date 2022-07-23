@@ -5,7 +5,7 @@ import { P, Button } from '../components'
 const Content = styled.div`
     display: flex;
     flex-direction: column;
-    margin-block-end: 10rem;
+    margin-block-end: 8rem;
     /* position: relative; */
 `
 

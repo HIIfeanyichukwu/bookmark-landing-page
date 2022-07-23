@@ -4,6 +4,7 @@ export const P = styled.p`
     line-height: 1.5;
     color: hsl(229, 8%, 60%);
     margin-block-end: 1.8rem;
+    font-size: .925rem;
 `
 
 export const Button = styled.button`

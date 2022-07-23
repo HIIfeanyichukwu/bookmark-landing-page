@@ -1,21 +1,154 @@
+import { useState } from "react"
 import styled from "styled-components"
 import { P, Button } from "../components"
+
+import tabone from '/images/illustration-features-tab-1.svg'
+import tabtwo from '/images/illustration-features-tab-2.svg'
+import tabthree from '/images/illustration-features-tab-3.svg'
+
+
+
 const Container = styled.div`
-  
+  text-align: center;
+
+  .tab {
+    margin-block-start: 2rem;
+  }
 `
 const Article = styled.article`
-  
+  line-height: 1.5;
+  order: 2;
+
+  h2 {
+    margin-block-end: 1rem;
+  }
 `
 
 const Tabs = styled.div`
-  
+  border-block: .5px solid #afb0b8;
+  margin-block-end: 2rem;
+
+  .tab_container + .tab_container {
+    border-block-start: .5px solid #afb0b8;
+  }
+`
+
+const Tab = styled.button`
+  border: none;
+  background-color: transparent;
+  display: inline-block;
+  block-size: 100%;
+  font-size: 1.1rem;
+  text-transform: capitalize;
+  color: hsl(229, 31%, 21%);
+  font-weight: 500;
+  padding-block: 1rem;
+
+  &.current {
+    position: relative;
+    ::after {
+      content: "";
+      position: absolute;
+      background-color: hsl(0, 94%, 66%);
+      bottom: 0;
+      left: 0;
+      right: 0;
+      inline-size: 90%;
+      margin: 0 auto;
+      block-size: 4px;
+    }
+  }
 `
 
 const TabContent = styled.div`
+  .tab_content {
+    display: flex;
+    flex-direction: column;
+  }
+`
+
+const Figure = styled.figure`
+  order: 1;
+`
+
+const IMG = styled.img`
+  inline-size: 100%;
+`
+
+const Pattern = styled.div`
   
 `
 
+type TabType = 'booking' | 'sharing' | 'searching'
+
+type E = React.MouseEvent<HTMLButtonElement, MouseEvent>
+
 export default function Section2() {
+
+  const [tab, setTab] = useState<TabType>('booking')
+
+  const handleClick = (e: E, tab: TabType) => {
+    setTab(tab)
+    let current = document.querySelector('button.current');
+    current?.classList.remove('current');
+    let target = e.target as HTMLElement
+    target.className += " current";
+  }
+
+  let content;
+  if (tab == 'booking') {
+    content = (
+      <>
+        <Article>
+          <h2>Bookmark in one click</h2>
+          <P>
+            Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.
+          </P>
+         <Button className="blue">more info</Button>
+        </Article>
+
+        <Figure>
+          <IMG alt="" src={tabone} />
+          <Pattern></Pattern>
+        </Figure>
+      </>
+    )
+  }else if (tab == 'searching') {
+    content = (
+      <>
+        <Article>
+          <h2>intelligent search</h2>
+          <P>
+            Our powerful search feature will help you find saved sites in no time at all. No need to trawl through all of your bookmarks.
+          </P>
+         <Button className="blue">more info</Button>
+        </Article>
+
+        <Figure>
+          <IMG alt="" src={tabtwo} />
+          <Pattern></Pattern>
+        </Figure>
+      </>
+    )
+  }else {
+    content = (
+      <>
+        <Article>
+          <h2>share your bookmarks</h2>
+          <P>
+            Easily share your bookmarks and collections with others. Create a shareable link that you can send at the click of a button.
+          </P>
+         <Button className="blue">more info</Button>
+        </Article>
+
+        <Figure>
+          <IMG alt="" src={tabthree} />
+          <Pattern></Pattern>
+        </Figure>
+      </>
+    )
+  }
+
   return (
     <div className="section">
       <div className="container">
@@ -30,10 +163,34 @@ export default function Section2() {
           </section>
           <section className="tab">
             <Tabs>
+              <div className="tab_container">
+                <Tab 
+                  onClick={(e) => handleClick(e, 'booking')}
+                  className="current">
+                  simple bookmarking
+                </Tab>
+              </div>
 
+              <div className="tab_container">
+                <Tab 
+                  onClick={(e) => handleClick(e, 'searching')}
+                >
+                  speedy searching
+                </Tab>
+              </div>
+
+              <div className="tab_container">
+                <Tab 
+                  onClick={(e) => handleClick(e, 'sharing')}
+                >
+                  easy sharing
+                </Tab>
+              </div>
             </Tabs>
             <TabContent>
-
+              <div className="tab_content">
+                {content}
+              </div>
             </TabContent>
           </section>
         </Container>
