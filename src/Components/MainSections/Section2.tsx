@@ -10,6 +10,7 @@ import tabthree from '/images/illustration-features-tab-3.svg'
 
 const Container = styled.div`
   text-align: center;
+  margin-block-end: 8rem;
 
   .tab {
     margin-block-start: 2rem;
@@ -21,6 +22,7 @@ const Article = styled.article`
 
   h2 {
     margin-block-end: 1rem;
+    font-size: 1.7rem;
   }
 `
 
@@ -40,11 +42,12 @@ const Tab = styled.button`
   block-size: 100%;
   font-size: 1.1rem;
   text-transform: capitalize;
-  color: hsl(229, 31%, 21%);
   font-weight: 500;
   padding-block: 1rem;
-
+  color: #575a68;
+  
   &.current {
+    color: hsl(229, 31%, 21%);
     position: relative;
     ::after {
       content: "";
@@ -64,11 +67,17 @@ const TabContent = styled.div`
   .tab_content {
     display: flex;
     flex-direction: column;
+
+    h3 {
+      font-size: 1.5rem;
+    }
   }
 `
 
 const Figure = styled.figure`
   order: 1;
+  position: relative;
+  margin-block: 3.5rem 5rem;
 `
 
 const IMG = styled.img`
@@ -76,7 +85,15 @@ const IMG = styled.img`
 `
 
 const Pattern = styled.div`
-  
+  block-size: 100%;
+  inline-size: 110%;
+  background-color: hsl(231, 69%, 60%);
+  /* padding: 2rem; */
+  position: absolute;
+  z-index: -1;
+  top: 20%;
+  left: -25%;
+  border-bottom-right-radius: 28%;
 `
 
 type TabType = 'booking' | 'sharing' | 'searching'
@@ -100,11 +117,11 @@ export default function Section2() {
     content = (
       <>
         <Article>
-          <h2>Bookmark in one click</h2>
+          <h3>Bookmark in one click</h3>
           <P>
             Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.
           </P>
-         <Button className="blue">more info</Button>
+         <Button className="blue hidden">more info</Button>
         </Article>
 
         <Figure>
@@ -117,11 +134,11 @@ export default function Section2() {
     content = (
       <>
         <Article>
-          <h2>intelligent search</h2>
+          <h3>intelligent search</h3>
           <P>
             Our powerful search feature will help you find saved sites in no time at all. No need to trawl through all of your bookmarks.
           </P>
-         <Button className="blue">more info</Button>
+         <Button className="blue hidden">more info</Button>
         </Article>
 
         <Figure>
@@ -134,11 +151,11 @@ export default function Section2() {
     content = (
       <>
         <Article>
-          <h2>share your bookmarks</h2>
+          <h3>share your bookmarks</h3>
           <P>
             Easily share your bookmarks and collections with others. Create a shareable link that you can send at the click of a button.
           </P>
-         <Button className="blue">more info</Button>
+         <Button className="blue hidden">more info</Button>
         </Article>
 
         <Figure>

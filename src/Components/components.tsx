@@ -4,7 +4,7 @@ export const P = styled.p`
     line-height: 1.5;
     color: hsl(229, 8%, 60%);
     margin-block-end: 1.8rem;
-    font-size: .925rem;
+    font-size: 1rem;
 `
 
 export const Button = styled.button`
@@ -24,6 +24,10 @@ export const Button = styled.button`
         /* box-shadow: none; */
         background-color: hsl(231, 69%, 60%);
         color: #ffffff;
+    }
+
+    &.blue.hidden {
+        display: none;
     }
 
     &.blue.lg {
