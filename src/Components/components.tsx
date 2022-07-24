@@ -5,6 +5,10 @@ export const P = styled.p`
     color: hsl(229, 8%, 60%);
     margin-block-end: 1.8rem;
     font-size: 1rem;
+
+    &.card {
+        margin-block-end: 1.5rem;
+    }
 `
 
 export const Button = styled.button`
@@ -31,7 +35,9 @@ export const Button = styled.button`
     }
 
     &.blue.lg {
-
+        padding-inline: 1.5rem;
+        padding-block: 1rem;
+        margin-block-start: 2rem;
     }
 
     &.red {

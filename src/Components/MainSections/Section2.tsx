@@ -10,7 +10,7 @@ import tabthree from '/images/illustration-features-tab-3.svg'
 
 const Container = styled.div`
   text-align: center;
-  margin-block-end: 8rem;
+  margin-block-end: 5rem;
 
   .tab {
     margin-block-start: 2rem;
@@ -70,6 +70,7 @@ const TabContent = styled.div`
 
     h3 {
       font-size: 1.5rem;
+      margin-block-end: 1rem;
     }
   }
 `
