@@ -22,10 +22,9 @@ const Bottom = styled.div`
 
 const Card = styled.article`
   padding-inline: 1.5rem;
-  padding-block: 2.5rem 1.5rem;
+  padding-block: 2.5rem 2rem;
   border-radius: 8px;
   position: relative;
-  /* display: flex; */
   text-align: center;
   justify-content: center;
   line-height: 1.5;

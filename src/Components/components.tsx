@@ -9,6 +9,10 @@ export const P = styled.p`
     &.card {
         margin-block-end: 1.5rem;
     }
+
+    &.question {
+        margin-block-start: 1.5rem;
+    }
 `
 
 export const Button = styled.button`
