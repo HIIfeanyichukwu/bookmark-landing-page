@@ -25,7 +25,6 @@ export const Button = styled.button`
     font-weight: bold;
     font-size: .95rem;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
-    /* filter: drop-shadow(0px 5px 10px rgba(0, 0, 0, 0.2)); */
     border-radius: 8px;
 
     &.blue {

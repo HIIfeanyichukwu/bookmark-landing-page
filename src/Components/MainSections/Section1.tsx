@@ -6,7 +6,6 @@ const Content = styled.div`
     display: flex;
     flex-direction: column;
     margin-block-end: 8rem;
-    /* position: relative; */
 `
 
 const Article = styled.article`
@@ -28,7 +27,6 @@ const Figure = styled.div`
     display: flex;
     justify-content: center;
     min-block-size: 277px;
-    /* overflow: hidden; */
     position: relative;
 `
 
@@ -56,7 +54,9 @@ const Pattern = styled.div`
 const CTA = styled.div`
     //CTA call to action button containers
     display: flex;
-    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
 `
 
 export default function Section1() {

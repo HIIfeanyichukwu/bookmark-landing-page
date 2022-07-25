@@ -6,7 +6,6 @@ import twitter from '/images/icon-twitter.svg'
 import hamburger from '/images/icon-hamburger.svg'
 import close from '/images/icon-close.svg'
 
-type Props = {}
 
 const Logo = styled.div`
     
@@ -43,6 +42,40 @@ const NavList = styled.ul`
             font-weight: 500;
         }
     }
+
+
+    @media (min-width: 1024px) {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        li {
+            border: none;
+            padding: 0;
+
+            a {
+                color: hsl(229, 31%, 21%);
+                display: block;
+                inline-size: 100%;
+                block-size: 100%;
+            }
+
+            a.login {
+                background-color: hsl(0, 94%, 66%);
+                display: block;
+                border: none;
+                font-weight: 400;
+                color: #fff;
+                padding-inline: 1.5rem;
+                padding-block: .5rem;
+            }
+        }
+    }
+
+    /* @media (min-width: 1440px) {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    } */
 `
 
 const Socials = styled.div`
@@ -97,10 +130,22 @@ const Menu = styled.div`
     }
 
     @media (min-width: 1024px) {
+        flex-basis: 40%;
+
         .navigation {
             display: block;
+            background-color: transparent;
+            padding: 0;
+            position: static;
         }
     }
+
+    /* @media (min-width: 1440px) {
+
+        .navigation {
+            position: static;
+        }
+    } */
 `
 
 const MenuBtn = styled.button`
@@ -130,11 +175,19 @@ const MenuBtn = styled.button`
         /* left: 5%; */
 
     }
+
+    @media (min-width: 1024px) {
+        display: none;
+    }
+
+    @media (min-width: 1440px) {
+        display: none;
+    }
 `
 
 type E = React.MouseEvent<HTMLButtonElement, MouseEvent>
 
-export default function Navbar({}: Props) {
+export default function Navbar() {
 
     const handleClick = (e: E) => {
         const target = e.target as HTMLElement;

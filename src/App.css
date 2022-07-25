@@ -21,3 +21,9 @@ h1, h2, h3 {
 footer {
   background-color: hsl(229, 31%, 21%);
 }
+
+@media (min-width: 1440px) {
+  .container {
+    inline-size: 80%;
+  }
+}
