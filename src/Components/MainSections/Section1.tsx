@@ -6,6 +6,12 @@ const Content = styled.div`
     display: flex;
     flex-direction: column;
     margin-block-end: 8rem;
+
+    @media (min-width: 1024px) {
+        flex-direction: row;
+        align-items: center;
+        gap: 5rem;
+    }
 `
 
 const Article = styled.article`
@@ -14,10 +20,27 @@ const Article = styled.article`
     text-align: center;
     line-height: 1.5;
 
+    @media (min-width: 1024px) {
+        order: 1;
+
+        text-align: start;
+        margin-block-start: 0;
+        flex: 1;
+    }
+
     h1 {
         font-size: 1.8rem;
         text-transform: capitalize;
         margin-block-end: 1rem;
+
+        @media (min-width: 1024px) {
+            font-size: 2rem;
+        }
+
+        @media (min-width: 1280px) {
+            font-size: 2.5rem;
+            max-inline-size: 58ch;
+        }
     }
 `
 
@@ -28,6 +51,10 @@ const Figure = styled.div`
     justify-content: center;
     min-block-size: 277px;
     position: relative;
+
+    @media (min-width: 1024px) {
+        flex: 1;
+    }
 `
 
 const IMG = styled.img`
@@ -57,6 +84,10 @@ const CTA = styled.div`
     gap: 1rem;
     flex-wrap: wrap;
     justify-content: center;
+
+    @media (min-width: 1024px) {
+        justify-content: start;
+    }
 `
 
 export default function Section1() {
@@ -66,7 +97,7 @@ export default function Section1() {
             <Content>
                 <Article>
                     <h1>A simple bookmark manager</h1>
-                    <P>
+                    <P className='sect1'>
                         A clean and simple interface to organize your favourite websites. Open a new browser tap and see your sites load instantly. Try it for free.
                     </P>
                     <CTA>

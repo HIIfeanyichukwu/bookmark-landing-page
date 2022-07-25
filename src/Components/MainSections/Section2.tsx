@@ -20,9 +20,22 @@ const Article = styled.article`
   line-height: 1.5;
   order: 2;
 
+
   h2 {
     margin-block-end: 1rem;
     font-size: 1.7rem;
+  }
+
+  p {
+    @media (min-width: 1024px) {
+      max-inline-size: 60ch;
+      margin: 0 auto;
+      padding-inline: 4rem;
+    }
+
+    @media (min-width: 1280px) {
+      padding-inline: 4.5rem;
+    }
   }
 `
 
@@ -30,9 +43,25 @@ const Tabs = styled.div`
   border-block: .5px solid #afb0b8;
   margin-block-end: 2rem;
 
+  @media (min-width: 1024px) {
+    border-block-start: none;
+    display: flex;
+    max-inline-size: 750px;
+    margin: 0 auto;
+    margin-block-start: 3.5rem;
+  }
+
   .tab_container + .tab_container {
     border-block-start: .5px solid #afb0b8;
+
+    @media (min-width: 1024px) {
+      border: none;
+    }
   }
+
+
+
+
 `
 
 const Tab = styled.button`
@@ -45,6 +74,17 @@ const Tab = styled.button`
   font-weight: 500;
   padding-block: 1rem;
   color: #575a68;
+  cursor: pointer;
+
+  @media (min-width: 1024px) {
+    display: block;
+    flex-grow: 1;
+    flex-basis: 100%;
+    padding-inline: 2rem;
+    padding-block: 0 1.5rem;
+    font-weight: bold;
+    inline-size: 250px;
+  }
   
   &.current {
     color: hsl(229, 31%, 21%);
@@ -59,6 +99,10 @@ const Tab = styled.button`
       inline-size: 90%;
       margin: 0 auto;
       block-size: 4px;
+
+      @media (min-width: 1024px) {
+        inline-size: 100%;
+      }
     }
   }
 `
@@ -67,6 +111,20 @@ const TabContent = styled.div`
   .tab_content {
     display: flex;
     flex-direction: column;
+
+
+    @media (min-width: 1024px) {
+      flex-direction: row;
+      /* gap: 4.5rem; */
+      gap: 8rem;
+      /* justify-content: space-between; */
+      align-items: center;
+      text-align: start;
+
+      p {
+        padding-inline: 0 ;
+      }
+    }
 
     h3 {
       font-size: 1.5rem;
@@ -79,6 +137,10 @@ const Figure = styled.figure`
   order: 1;
   position: relative;
   margin-block: 3.5rem 5rem;
+
+  @media (min-width: 1280px) {
+    flex-basis: 75%;
+  }
 `
 
 const IMG = styled.img`

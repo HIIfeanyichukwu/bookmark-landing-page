@@ -6,12 +6,27 @@ export const P = styled.p`
     margin-block-end: 1.8rem;
     font-size: 1rem;
 
+    &.sect1 {
+        @media (min-width: 1024px) {
+            max-inline-size: 58ch;
+            /* font-size: 1.2rem; */
+        }
+
+        @media (min-width: 1440px) {
+
+        }
+    }
+
     &.card {
         margin-block-end: 1.5rem;
     }
 
     &.question {
         margin-block-start: 1.5rem;
+    }
+
+    @media (min-width: 1280px) {
+        font-size: 1.2rem;
     }
 `
 
