@@ -4,8 +4,9 @@ import fb from '/images/icon-facebook.svg'
 import twitter from '/images/icon-twitter.svg'
 
 const Main = styled.div`
-    /* display: flex; */
     line-height: 1.5;
+
+    
 
     .links {
         list-style: none;
@@ -20,7 +21,6 @@ const Main = styled.div`
             text-decoration: none;
             text-transform: uppercase;
             color: #ffffff;
-            /* font-weight: 500; */
             text-align: center;
             font-size: 1.1rem;
         }
@@ -29,12 +29,36 @@ const Main = styled.div`
     .logo {
         margin-block-end: 2.3rem;
     }
+
+    @media (min-width: 1024px) {
+        display: flex;
+        gap: 2.5rem;
+
+        .logo {
+            margin: 0;
+        }
+
+        .links {
+            margin: 0;
+            display: flex;
+            gap: 1.5rem;
+
+            li + li {
+                margin: 0;
+            }
+        }
+    }
 `
 
 const Logos = styled.div`
     display: flex;
     gap: 2.5rem;
     align-items: center;
+
+    @media (min-width: 1024px) {
+
+        margin-inline-start: auto;
+    }
 `
 
 
@@ -44,6 +68,10 @@ const Container = styled.div`
     flex-direction: column;
     padding-block: 3rem;
     align-items: center;
+
+    @media (min-width: 1024px) {
+        flex-direction: row;
+    }
 `
 
 export default function Footer() {
