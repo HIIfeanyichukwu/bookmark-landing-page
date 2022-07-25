@@ -27,7 +27,9 @@ const Figure = styled.div`
     padding-block-end: 2.2rem;
     display: flex;
     justify-content: center;
+    min-block-size: 277px;
     /* overflow: hidden; */
+    position: relative;
 `
 
 const IMG = styled.img`
@@ -39,20 +41,15 @@ const IMG = styled.img`
 `
 
 const Pattern = styled.div`
-    /* block-size: 200px; */
-    /* block-size: 46%; */
+    block-size: 85%;
     background-color: hsl(231, 69%, 60%);
     inline-size: 100%;
-    /* height: 50%; */
-    border-top-left-radius: 30%;
     border-bottom-left-radius: 30%;
     position: absolute;
     top: 10%;
     bottom: calc((100% - 45%) + 1rem);
-    /* bottom: 45%; */
     z-index: -1;
     right: -23%;
-    /* transform: scale(1.15); */
     padding: 1rem;
 `
 

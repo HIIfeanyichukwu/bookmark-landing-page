@@ -78,6 +78,22 @@ const Menu = styled.div`
 
     .navigation.shownav {
         display: block;
+        ::after {
+            content: "";
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: -1;
+            inline-size: 100%;
+            block-size: 100%;
+            height: 100%;
+            filter: blur(5px);
+            filter: opacity(1);
+            /* background-color: rgba(0, 0, 0, 0.5); */
+            
+        }
     }
 
     @media (min-width: 1024px) {
@@ -97,13 +113,35 @@ const MenuBtn = styled.button`
     background-position: center center;
     background-color: transparent;
     border: none;
+    width: 100px;
+    height: 100px;
+    right: -30%;
 
     &.close {
         background-image: url(${close});
+        position: fixed;
+        z-index: 1000;
+        width: 100px;
+        height: 100px;
+        right: 1.5%;
+        right: 0;
+        /* left: 2%; */
+        top: 2%;
+        /* left: 5%; */
+
     }
 `
 
+type E = React.MouseEvent<HTMLButtonElement, MouseEvent>
+
 export default function Navbar({}: Props) {
+
+    const handleClick = (e: E) => {
+        const target = e.target as HTMLElement;
+        document.querySelector('.navigation')?.classList.toggle('shownav')
+        target.classList.toggle('close')
+    }
+
   return (
     <div className="container">
         <Nav>
@@ -116,7 +154,11 @@ export default function Navbar({}: Props) {
             </Logo>
             <Menu>
 
-                <MenuBtn>menu</MenuBtn>
+                <MenuBtn
+                    onClick={handleClick}
+                >menu</MenuBtn>
+
+
                 <div className="navigation">
 
                     <NavList>
