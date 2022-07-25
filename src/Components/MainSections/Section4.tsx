@@ -10,15 +10,30 @@ const Contents = styled.div`
   h2 {
     margin-block-end: 1rem;
   }
+
+  > p {
+    @media (min-width: 1024px) {
+      max-inline-size: 45ch;
+      margin: 0 auto;
+    }
+  }
 `
 
 const Questions = styled.section`
   text-align: start;
   margin-block: 2rem 1.5rem;
+
+  @media (min-width: 1024px) {
+    max-inline-size: 45ch;
+    margin: 0 auto;
+    border-block-start: .5px solid hsl(229, 8%, 60%);
+    margin-block-start: 2.5rem;
+  }
 `
 
 const Detail = styled.details`
   border-bottom: .5px solid hsl(229, 8%, 60%);
+  cursor: pointer;
 
   .rotate{
     transform: rotate(180deg);

@@ -50,6 +50,11 @@ export const Button = styled.button`
 
     &.blue.hidden {
         display: none;
+
+        @media (min-width: 1024px) {
+            display: block;
+            margin-block-start: 2rem;
+        }
     }
 
     &.blue.lg {
