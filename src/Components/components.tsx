@@ -68,5 +68,9 @@ export const Button = styled.button`
         color: #ffffff;
         inline-size: 100%;
         font-size: 1rem;
+
+        @media (min-width: 1024px) {
+            flex: 1;
+        }
     }
 `

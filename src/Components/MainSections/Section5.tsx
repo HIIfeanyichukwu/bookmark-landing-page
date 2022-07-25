@@ -7,6 +7,13 @@ const Container = styled.div`
   padding-block: 5rem;
   text-align: center;
 
+  @media (min-width: 1024px) {
+    .container {
+      max-inline-size: 50ch;
+      margin: 0 auto;
+    }
+  }
+
   h2, h3 {
     color: #ffffff;
   }
@@ -16,13 +23,20 @@ const Container = styled.div`
     letter-spacing: 3px;
     text-transform: uppercase;
     font-weight: 500;
-    margin-block-end: 1rem;
+    margin-block-end: 1.5rem;
   }
 
   h3 {
     font-size: 1.5rem;
     font-weight: 500;
     margin-block-end: 2rem;
+
+    @media (min-width: 1024px) {
+      max-inline-size: 20ch;
+      font-size: 1.8rem;
+      margin-block-end: 2.5rem;
+      margin-inline: auto;
+    }
   }
 `
 
@@ -38,12 +52,24 @@ const Form = styled.form`
     position: absolute;
     width: 1px;
   }
+
+  @media (min-width: 1024px) {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
 `
 
 const InputBox = styled.div`
   margin-block-end: 1rem;
   position: relative;
   transition: all .2s;
+
+  @media (min-width: 1024px) {
+    margin: 0;
+    flex-basis: 70%;
+    flex: 3;
+  }
 
   svg {
     display: none;
