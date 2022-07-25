@@ -17,3 +17,7 @@
 h1, h2, h3 {
   color: hsl(229, 31%, 21%);
 }
+
+footer {
+  background-color: hsl(229, 31%, 21%);
+}
