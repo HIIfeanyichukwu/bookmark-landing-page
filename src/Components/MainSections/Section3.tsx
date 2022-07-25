@@ -14,10 +14,22 @@ const Top = styled.div`
     margin-block-end: 1.2rem;
     font-weight: 1.7rem;
   }
+
+  p {
+    @media (min-width: 1024px) {
+      max-inline-size: 50ch;
+      margin: 0 auto;
+    }
+  }
 `
 
 const Bottom = styled.div`
   margin-block: 3rem 8rem;
+  @media (min-width: 1024px) {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+  }
 `
 
 const Card = styled.article`
@@ -30,10 +42,28 @@ const Card = styled.article`
   line-height: 1.5;
   box-shadow: 4px 8px 10px  rgba(0, 0, 0, 0.08),
   -4px 8px 10px rgba(0, 0, 0, 0.1);
+  max-block-size: 360px;
 
   & + & {
     margin-block-start: 4.5rem;
+
+    @media (min-width: 1024px) {
+      margin-block-start: 0;
+    }
   }
+
+
+  @media (min-width: 1024px) {
+    &.second {
+      margin-block-start: 2rem;
+    }
+    &.third {
+      margin-block-start: 4rem;
+    }
+  }
+
+
+
 `
 
 const IMG = styled.img`
@@ -74,7 +104,7 @@ export default function Section3() {
             <Button className="blue lg">Add & install Extension</Button>
           </Card>
 
-          <Card>
+          <Card className="second">
             <IMG className="card" src={firefox} alt="firefox browser logo"/>
             <h3>Add to Chrome</h3>
             <P className="card">Minimum version 55</P>
@@ -83,7 +113,7 @@ export default function Section3() {
             <Button className="blue lg">Add & install Extension</Button>
           </Card>
 
-          <Card>
+          <Card className="third">
             <IMG className="card" src={opera} alt="opera browser logo"/>
             <h3>Add to Chrome</h3>
             <P className="card">Minimum version 62</P>
