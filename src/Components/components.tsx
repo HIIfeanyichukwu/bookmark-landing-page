@@ -23,7 +23,7 @@ export const Button = styled.button`
     padding-inline: .9rem;
     border: none;
     font-weight: bold;
-    font-size: .9rem;
+    font-size: .95rem;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
     /* filter: drop-shadow(0px 5px 10px rgba(0, 0, 0, 0.2)); */
     border-radius: 8px;
@@ -45,6 +45,9 @@ export const Button = styled.button`
     }
 
     &.red {
-
+        background-color: hsl(0, 94%, 66%);
+        color: #ffffff;
+        inline-size: 100%;
+        font-size: 1rem;
     }
 `
