@@ -17,7 +17,7 @@ const Top = styled.div`
 
   p {
     @media (min-width: 1024px) {
-      max-inline-size: 50ch;
+      max-inline-size: 52ch;
       margin: 0 auto;
     }
   }
@@ -25,7 +25,7 @@ const Top = styled.div`
 
 const Bottom = styled.div`
   margin-block: 3rem 8rem;
-  @media (min-width: 1024px) {
+  @media (min-width: 768px) {
     display: flex;
     justify-content: center;
     gap: 1.5rem;
@@ -53,7 +53,7 @@ const Card = styled.article`
   }
 
 
-  @media (min-width: 1024px) {
+  @media (min-width: 768px) {
     &.second {
       margin-block-start: 2rem;
     }

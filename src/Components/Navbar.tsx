@@ -31,6 +31,13 @@ const NavList = styled.ul`
         a {
             text-decoration: none;
             color: #fff;
+            transition: color .3s;
+
+            @media (hover: hover ) {
+                :hover {
+                    color: hsl(0, 94%, 66%);
+                }
+            }
         }
 
         a.login {
@@ -40,11 +47,21 @@ const NavList = styled.ul`
             padding-block: .5rem;
             border-radius: 4px;
             font-weight: 500;
+            transition: all .3s;
+
+            @media (hover: hover ) {
+                :hover {
+                    color: hsl(0, 94%, 66%);
+                    border-color: hsl(0, 94%, 66%);
+                    background-color: transparent;
+                    border: 1px solid;
+                }
+            }
         }
     }
 
 
-    @media (min-width: 1024px) {
+    @media (min-width: 768px) {
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -62,7 +79,7 @@ const NavList = styled.ul`
             a.login {
                 background-color: hsl(0, 94%, 66%);
                 display: block;
-                border: none;
+                border: 1px solid hsl(0, 94%, 66%);
                 font-weight: 400;
                 color: #fff;
                 padding-inline: 1.5rem;
@@ -71,11 +88,7 @@ const NavList = styled.ul`
         }
     }
 
-    /* @media (min-width: 1440px) {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    } */
+
 `
 
 const Socials = styled.div`
@@ -88,7 +101,7 @@ const Socials = styled.div`
     align-items: center;
     gap: 2.5rem;
 
-    @media (min-width: 1024px) {
+    @media (min-width: 768px) {
         display: none;
     }
 `
@@ -124,13 +137,12 @@ const Menu = styled.div`
             height: 100%;
             filter: blur(5px);
             filter: opacity(1);
-            /* background-color: rgba(0, 0, 0, 0.5); */
             
         }
     }
 
-    @media (min-width: 1024px) {
-        flex-basis: 40%;
+    @media (min-width: 768px) {
+        flex-basis: 55%;
 
         .navigation {
             display: block;
@@ -138,6 +150,10 @@ const Menu = styled.div`
             padding: 0;
             position: static;
         }
+    }
+
+    @media (min-width: 1024px) {
+        flex-basis: 40%;
     }
 
     /* @media (min-width: 1440px) {
@@ -176,13 +192,11 @@ const MenuBtn = styled.button`
 
     }
 
-    @media (min-width: 1024px) {
+    @media (min-width: 768px) {
         display: none;
     }
 
-    @media (min-width: 1440px) {
-        display: none;
-    }
+
 `
 
 type E = React.MouseEvent<HTMLButtonElement, MouseEvent>

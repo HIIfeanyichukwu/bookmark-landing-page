@@ -7,7 +7,7 @@ const Container = styled.div`
   padding-block: 5rem;
   text-align: center;
 
-  @media (min-width: 1024px) {
+  @media (min-width: 768px) {
     .container {
       max-inline-size: 50ch;
       margin: 0 auto;
@@ -31,8 +31,8 @@ const Container = styled.div`
     font-weight: 500;
     margin-block-end: 2rem;
 
-    @media (min-width: 1024px) {
-      max-inline-size: 20ch;
+    @media (min-width: 768px) {
+      max-inline-size: 25ch;
       font-size: 1.8rem;
       margin-block-end: 2.5rem;
       margin-inline: auto;
@@ -53,9 +53,9 @@ const Form = styled.form`
     width: 1px;
   }
 
-  @media (min-width: 1024px) {
+  @media (min-width: 768px) {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 1rem;
   }
 `
@@ -65,7 +65,7 @@ const InputBox = styled.div`
   position: relative;
   transition: all .2s;
 
-  @media (min-width: 1024px) {
+  @media (min-width: 768px) {
     margin: 0;
     flex-basis: 70%;
     flex: 3;

@@ -7,9 +7,13 @@ const Content = styled.div`
     flex-direction: column;
     margin-block-end: 8rem;
 
-    @media (min-width: 1024px) {
+    @media (min-width: 768px) {
         flex-direction: row;
         align-items: center;
+        gap: 3rem;
+    }
+
+    @media (min-width: 1024px) {
         gap: 5rem;
     }
 `
@@ -20,7 +24,9 @@ const Article = styled.article`
     text-align: center;
     line-height: 1.5;
 
-    @media (min-width: 1024px) {
+
+
+    @media (min-width: 768px) {
         order: 1;
 
         text-align: start;
@@ -52,7 +58,7 @@ const Figure = styled.div`
     min-block-size: 277px;
     position: relative;
 
-    @media (min-width: 1024px) {
+    @media (min-width: 768px) {
         flex: 1;
     }
 `
@@ -85,7 +91,7 @@ const CTA = styled.div`
     flex-wrap: wrap;
     justify-content: center;
 
-    @media (min-width: 1024px) {
+    @media (min-width: 768px) {
         justify-content: start;
     }
 `

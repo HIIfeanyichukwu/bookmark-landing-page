@@ -20,6 +20,17 @@ const Article = styled.article`
   line-height: 1.5;
   order: 2;
 
+  @media (min-width: 768px) {
+    flex-basis: 50%;
+    /* 
+      this is just for the article component in tabs content
+    */
+  }
+
+  @media (min-width: 1024px) {
+    flex-basis: auto;
+  }
+
 
   h2 {
     margin-block-end: 1rem;
@@ -28,13 +39,13 @@ const Article = styled.article`
 
   p {
     @media (min-width: 1024px) {
-      max-inline-size: 60ch;
+      max-inline-size: 62ch;
       margin: 0 auto;
-      padding-inline: 4rem;
+      padding-inline: 2.7rem;
     }
 
     @media (min-width: 1280px) {
-      padding-inline: 4.5rem;
+      padding-inline: 3.5rem;
     }
   }
 `
@@ -43,18 +54,22 @@ const Tabs = styled.div`
   border-block: .5px solid #afb0b8;
   margin-block-end: 2rem;
 
-  @media (min-width: 1024px) {
+  @media (min-width: 768px) {
     border-block-start: none;
     display: flex;
-    max-inline-size: 750px;
     margin: 0 auto;
     margin-block-start: 3.5rem;
+    max-inline-size: 600px;
+  }
+
+  @media (min-width: 1024px) {
+    max-inline-size: 750px;
   }
 
   .tab_container + .tab_container {
     border-block-start: .5px solid #afb0b8;
 
-    @media (min-width: 1024px) {
+    @media (min-width: 768px) {
       border: none;
     }
   }
@@ -76,14 +91,25 @@ const Tab = styled.button`
   color: #575a68;
   cursor: pointer;
 
-  @media (min-width: 1024px) {
+  @media (hover: hover) {
+    transition: all .3s;
+    :hover {
+      color: hsl(0, 94%, 66%);
+    }
+  }
+
+  @media (min-width: 768px) {
     display: block;
     flex-grow: 1;
     flex-basis: 100%;
-    padding-inline: 2rem;
     padding-block: 0 1.5rem;
     font-weight: bold;
+    inline-size: 200px;
+  }
+  
+  @media (min-width: 1024px) {
     inline-size: 250px;
+    padding-inline: 2rem;
   }
   
   &.current {
@@ -113,17 +139,19 @@ const TabContent = styled.div`
     flex-direction: column;
 
 
-    @media (min-width: 1024px) {
+    @media (min-width: 768px) {
       flex-direction: row;
-      /* gap: 4.5rem; */
-      gap: 8rem;
-      /* justify-content: space-between; */
+      gap: 4.5rem;
       align-items: center;
       text-align: start;
 
       p {
         padding-inline: 0 ;
       }
+    }
+
+    @media (min-width: 1024px) {
+      gap: 8rem;
     }
 
     h3 {
@@ -137,6 +165,10 @@ const Figure = styled.figure`
   order: 1;
   position: relative;
   margin-block: 3.5rem 5rem;
+
+  @media (min-width: 768px) {
+    flex-basis: 50%;
+  }
 
   @media (min-width: 1280px) {
     flex-basis: 75%;

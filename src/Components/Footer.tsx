@@ -23,6 +23,13 @@ const Main = styled.div`
             color: #ffffff;
             text-align: center;
             font-size: 1.1rem;
+            transition: all .3s;
+
+            @media (hover: hover) {
+                :hover {
+                    color: hsl(0, 94%, 66%);
+                }
+            }
         }
     }
 
@@ -58,6 +65,13 @@ const Logos = styled.div`
     @media (min-width: 1024px) {
 
         margin-inline-start: auto;
+
+    }
+
+    @media (hover: hover) {
+        a {
+            filter: saturate(hsl(0, 94%, 66%));
+        }
     }
 `
 
