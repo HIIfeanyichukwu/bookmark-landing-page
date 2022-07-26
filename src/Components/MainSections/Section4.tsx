@@ -84,12 +84,12 @@ export default function Section4() {
             <Detail
               onToggle={handleToggle}
             >
-              <Summary>
+              <Summary aria-label="question">
                 What is Bookmark?
 
                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="12"><path fill="none" stroke="#5267DF" strokeWidth="3" d="M1 1l8 8 8-8"/></svg>
               </Summary>
-              <P className="question">
+              <P className="question" aria-label="answer">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt justo eget ultricies fringilla. Phasellus blandit ipsum quis quam ornare mattis.
               </P>
             </Detail>
@@ -98,12 +98,12 @@ export default function Section4() {
             <Detail
               onToggle={handleToggle}
             >
-              <Summary>
+              <Summary aria-label="question">
                 How can I request a new browser?
 
                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="12"><path fill="none" stroke="#5267DF" strokeWidth="3" d="M1 1l8 8 8-8"/></svg>
               </Summary>
-              <P className="question">
+              <P className="question" aria-label="answer">
                 Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. Suspendisse imperdiet. Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. Suspendisse imperdie tVivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.
               </P>
             </Detail>
@@ -112,12 +112,12 @@ export default function Section4() {
             <Detail
               onToggle={handleToggle}
             >
-              <Summary>
+              <Summary aria-label="question">
                 Is there a mobile app?
 
                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="12"><path fill="none" stroke="#5267DF" strokeWidth="3" d="M1 1l8 8 8-8"/></svg>
               </Summary>
-              <P className="question">
+              <P className="question" aria-label="answer">
                 Sed consectetur quam id neque fermentum accumsan. Praesent luctus vestibulum dolor, ut condimentum urna vulputate eget. Cras in ligula quis est pharetra mattis sit amet pharetra purus. Sed sollicitudin ex et ultricies bibendum.
               </P>
             </Detail>
@@ -126,12 +126,12 @@ export default function Section4() {
             <Detail
               onToggle={handleToggle}
             >
-              <Summary>
+              <Summary aria-label="question">
                 What about other Chromium browsers?
 
                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="12"><path fill="none" stroke="#5267DF" strokeWidth="3" d="M1 1l8 8 8-8"/></svg>
               </Summary>
-              <P className="question">
+              <P className="question" aria-label="answer">
                 Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat mi, at euismod dui. Aliquam vitae neque eget nisl gravida pellentesque non ut velit
               </P>
             </Detail>
